@@ -1,6 +1,16 @@
 from tkinter import *
+from database import insert_data
 
 def submit_form():
+    name = name_value.get()
+    branch = branch_value.get()
+    gender = gender_value.get()
+    contact = contact_value.get()
+    email = email_value.get()
+    address = address_value.get()
+    
+    # Call the insert_data function to insert the form data into the database
+    insert_data(name, branch, gender, contact, email, address)
     print('Form submitted successfully')
 
 root = Tk()
